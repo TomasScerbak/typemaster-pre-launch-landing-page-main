@@ -30,15 +30,16 @@ h2,
 h3 {
   color: var(--primary-color-heading);
   margin: 0;
-  line-height: 4.5rem;
 }
 h1 {
   font-size: 4.8rem;
   font-weight: 900;
+  line-height: 4.5rem;
 }
 h2 {
-  font-size: 3.2px;
+  font-size: 3.2rem;
   font-weight: 900;
+  line-height: 3rem;
 }
 h3 {
   font-size: 2.4rem;
@@ -55,6 +56,13 @@ img {
 /* Sections */
 .section--one {
   margin-bottom: 2.4rem;
+}
+.section--two {
+  margin-bottom: 7.5rem;
+}
+@media screen and (min-width: 1200px) {
+  .section--one {
+    margin-right: 4rem;
 }
 /* Navigation bar */
 .navbar {
@@ -153,9 +161,16 @@ span {
   }
 }
 @media screen and (min-width: 900px) {
+  .feature__footer {
+    justify-content: left;
+  }
   .feature__image {
     margin-top: 0;
     margin-left: 0;
+    margin-right: 16.5rem;
+  }
+  span {
+    margin-left: 4rem;
   }
 }
 /* Grid */
@@ -167,9 +182,6 @@ span {
   gap: 2.4rem;
 }
 @media screen and (min-width: 380px) {
-  .grid {
-    margin-bottom: 7.5rem;
-  }
   .grid--1x2-row {
     grid-template-rows: repeat(1, 1fr);
   }
@@ -178,15 +190,37 @@ span {
   .grid--1x2-columns {
     grid-template-columns: repeat(2, 1fr);
   }
+  .grid--1x2-columns-with-gap {
+    justify-items: center;
+    margin: 3.9rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .grid--1x2-columns-with-gap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .grid--1x2-columns {
+    align-items: center;
+  }
+  .grid--1x3-with-gap {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 /* Section Two */
 .feature--two-image-one {
-  object-fit: cover;
-  height: 19.3rem;
-  margin-left: -0.9rem;
+  height: 100%;
+  mix-blend-mode: multiply;
 }
 .feature--two-image-two {
   height: 19.3rem;
   width: 22rem;
   margin-right: 2.4rem;
+}
+.bg--color {
+  border-radius: 0px 20px 20px 0;
+  object-fit: cover;
+  height: 19.3rem;
+  margin-left: -2.5rem;
+  background-color: var(--primary-color-button);
 }
