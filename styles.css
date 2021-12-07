@@ -60,10 +60,6 @@ img {
 .section--two {
   margin-bottom: 7.5rem;
 }
-@media screen and (min-width: 1200px) {
-  .section--one {
-    margin-right: 4rem;
-}
 /* Navigation bar */
 .navbar {
   display: flex;
@@ -178,17 +174,21 @@ span {
   display: grid;
 }
 .grid--1x2-columns-with-gap {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr 1fr);
   gap: 2.4rem;
 }
 @media screen and (min-width: 380px) {
   .grid--1x2-row {
     grid-template-rows: repeat(1, 1fr);
   }
+  .grid--1x2-columns {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media screen and (min-width: 760px) {
   .grid--1x2-columns {
     grid-template-columns: repeat(2, 1fr);
+    margin: auto;
   }
   .grid--1x2-columns-with-gap {
     justify-items: center;
@@ -205,12 +205,15 @@ span {
   }
   .grid--1x3-with-gap {
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
   }
 }
 /* Section Two */
 .feature--two-image-one {
   height: 100%;
   mix-blend-mode: multiply;
+  width: 12.9rem;
 }
 .feature--two-image-two {
   height: 19.3rem;
@@ -221,6 +224,41 @@ span {
   border-radius: 0px 20px 20px 0;
   object-fit: cover;
   height: 19.3rem;
+  width: 12.9rem;
   margin-left: -2.5rem;
   background-color: var(--primary-color-button);
+}
+.feature--body {
+  text-align: center;
+}
+.feature--two-heading {
+  margin: 7.5rem 6rem 0 6rem;
+}
+.feature--two-text {
+  margin: 2.4rem 2.4rem 0 2.4rem;
+}
+@media screen and (min-width: 768px) {
+  .feature--two-image-one {
+    width: 21.4rem;
+    height: 32rem;
+  }
+  .feature--two-image-two {
+    width: 44.5rem;
+    height: 32rem;
+  }
+  .bg--color {
+    margin: 0;
+    border-radius: 20px;
+    width: 21.4rem;
+    height: 32rem;
+  }
+  .feature--body {
+    text-align: left;
+  }
+  .feature--two-heading {
+    margin: 0 2.5rem 0 3.9rem;
+  }
+  .feature--two-text {
+    margin: 0 4rem 0 0;
+  }
 }
