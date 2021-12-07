@@ -341,18 +341,26 @@ footer {
   text-align: center;
 }
 /* Bacground Gray Square Patterns */
-.bg--image-left,
-.bg--image-right {
-  width: 25.5rem;
-  height: 23.6rem;
-}
-.left--side-bg {
-  position: absolute;
-  top: 41%;
-  left: -23%;
-}
+.left--side-bg,
 .right--side-bg {
-  position: absolute;
-  top: 6%;
-  right: -23%;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .bg--image-left,
+  .bg--image-right {
+    width: 25.5rem;
+    height: 23.6rem;
+  }
+  .left--side-bg {
+    display: block;
+    position: absolute;
+    top: 39%;
+    left: -23%;
+  }
+  .right--side-bg {
+    display: block;
+    position: absolute;
+    top: 6%;
+    right: -23%;
+  }
 }
