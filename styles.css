@@ -169,44 +169,52 @@ span {
     margin-left: 4rem;
   }
 }
-/* Grid */
+/* Grid Section one*/
 .grid {
   display: grid;
 }
-.grid--1x2-columns-with-gap {
-  grid-template-columns: repeat(2, 1fr 1fr);
-  gap: 2.4rem;
+.grid--1x2-columns {
+  grid-template-columns: repeat(1, 1fr);
 }
-@media screen and (min-width: 380px) {
-  .grid--1x2-row {
-    grid-template-rows: repeat(1, 1fr);
-  }
-  .grid--1x2-columns {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 768px) {
   .grid--1x2-columns {
     grid-template-columns: repeat(2, 1fr);
-    margin: auto;
-  }
-  .grid--1x2-columns-with-gap {
-    justify-items: center;
-    margin: 3.9rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .grid--1x2-columns-with-gap {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-  }
   .grid--1x2-columns {
     align-items: center;
   }
-  .grid--1x3-with-gap {
-    grid-template-columns: repeat(3, 1fr);
+}
+/* Grid Section Two */
+.grid--2x3 {
+  grid-template: repeat(2, 1fr) / 10fr 50fr;
+  gap: 2rem;
+}
+.feature--two-image-two {
+  grid-row: 1;
+}
+.article {
+  grid-column: -3 /-1;
+  margin: auto;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .grid--2x2 {
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    margin: auto;
     justify-items: center;
-    align-items: center;
+  }
+  .article {
+    display: flex;
+    margin-bottom: 20rem;
+  }
+  .feature--two-heading {
+    text-align: left;
+  }
+  .feature--two-text {
+    text-align: left;
+    padding-left: 10rem;
   }
 }
 /* Section Two */
@@ -232,7 +240,7 @@ span {
   text-align: center;
 }
 .feature--two-heading {
-  margin: 7.5rem 6rem 0 6rem;
+  margin: 0 6rem 0 6rem;
 }
 .feature--two-text {
   margin: 2.4rem 2.4rem 0 2.4rem;
